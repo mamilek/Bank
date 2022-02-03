@@ -1,4 +1,5 @@
 ﻿using System;
+using Bank.Helpers;
 
 namespace Bank
 {
@@ -6,7 +7,7 @@ namespace Bank
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Menu.DisplayMenu();
         }
     }
 }
