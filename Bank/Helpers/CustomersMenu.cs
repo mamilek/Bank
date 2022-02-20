@@ -48,12 +48,8 @@ namespace Bank.Helpers
             return Customers;
         }
 
-        public void DisplayCustomers()
+        public void DisplayCustomers(List<Customer> customers)
         {
-            List<Customer> customers = new List<Customer>();
-            customers = GetListOfCustomers();
-
-            Console.Clear();
             Console.WriteLine("ID | IMIĘ I NAZWISKO | NR KONTA | SALDO");
 
             foreach (var item in customers)
@@ -61,7 +57,6 @@ namespace Bank.Helpers
                 Console.WriteLine($"{item.ID.ToString()} | {item.ImieInazwisko} | {item.Konto.ToString()} | {item.Saldo.ToString()}");
             }
             Menu.DisplayMenu();
-            Console.Clear();
         }
     }
 }

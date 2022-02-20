@@ -59,7 +59,7 @@ namespace Bank.Helpers
                                 Console.ForegroundColor = ConsoleColor.Green;
                                 Console.WriteLine("PRZELEW WYKONANY");
                                 Console.ForegroundColor = ConsoleColor.White;
-                                customersMenu.DisplayCustomers();
+                                customersMenu.DisplayCustomers(customers);
                             }
                             else
                             {
@@ -90,11 +90,6 @@ namespace Bank.Helpers
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("NIEUDANE LOGOWANIE");
             }
-        }
-
-        private void Transfer()
-        {
-
         }
     }
 }

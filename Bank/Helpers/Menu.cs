@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace Bank.Helpers
 {
     public static class Menu
@@ -15,8 +17,12 @@ namespace Bank.Helpers
 
             if (response == "1")
             {
+                Console.Clear();
+                List<Customer> customers = new List<Customer>();
+
                 CustomersMenu customersMenu = new CustomersMenu();
-                customersMenu.DisplayCustomers();
+                customers = customersMenu.GetListOfCustomers();
+                customersMenu.DisplayCustomers(customers);
             }
             else if (response == "2")
             {
@@ -25,7 +31,9 @@ namespace Bank.Helpers
             }
             else if (response == "3")
             {
-                //EndProgram();
+                Console.Clear();
+                Console.WriteLine("Wylogowanie poprawne.");
+                return;
             }
             else
             {
